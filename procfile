@@ -1,1 +1,1 @@
-worker: python GiphyBot/GiphyBot.py
+worker: python GiphyBot.py

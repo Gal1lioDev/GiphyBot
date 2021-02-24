@@ -24,7 +24,7 @@ async def on_message(message):
         api_key = os.getenv('API_KEY')
         api_instance = giphy_client.DefaultApi()
         
-        api_responce = api_instance.gifs_search_get(api_key,message.content, limit=15, rating='g')
+        api_responce = api_instance.gifs_search_get(api_key,message.content, limit=15, rating='r')
         lst = list(api_responce.data)
         giff = random.choice(lst)
         await message.channel.send(giff.embed_url)
